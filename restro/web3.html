@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivary</title>
+    <link rel="stylesheet" href="web3.css">
+    <link rel="stylesheet" media="screen and (max-width:32em)" href="web31.css">
+    <script type="text/javascript">
+    function validate(){
+
+    var inll=document.getElementById("id11");
+    var regx3=/[!@#%&~]/;
+    var email=document.getElementById("id66").value;
+    var mail=document.getElementById("id66");
+    var ct=document.getElementById("id88").value;
+    var ctt=document.getElementById("id88");
+    var regx2=/^[7-9]\d{9}$/;
+    //var tot= document.getElementById("id1").value;
+    var regx=/^([a-z0-9\.-]+)@([a-z0-9-]+)\.([a-z]{2,8})(.[a-z]{2,8})?$/;
+    //var pre=document.getElementById("q");
+
+    if(inll.value.trim()=="")
+    {
+        inll.style.border="3px solid red";
+        document.getElementById("id33").style.visibility="visible";
+        return false;
+    }
+    else if (!regx.test(email))
+    {
+       mail.style.border="3px solid red";
+       document.getElementById("id77").style.visibility="visible";
+       return false;
+    }
+    else if(!regx2.test(ct))
+    {
+        ctt.style.border="3px solid red";
+        document.getElementById("id99").style.visibility="visible";
+        return false;
+    }
+    else{
+       return true;
+    }
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&family=Playball&family=Yellowtail&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&family=Yellowtail&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&family=Balthazar&family=Playball&family=Yellowtail&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logoo.png" />
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services-container">Menu</a></li>
+            <li class="item"><a href="#client-section">Services</a></li>
+            <li class="item"><a href="#contact">Contact</a></li>
+            
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="h-primary">Welcome To Chaudhari's</h1>
+        <h1 class="h-primary">Kitchen</h1>
+        <p>Give Your Tounge a taste of heaven with the delicious recepi's of <u>Chef Tanvi Chaudhari.</u>
+
+        </p>
+        
+        <button class="btn"><b>Order Now</b></button>
+    </section>
+    <section id="services-container">
+        <h1 class="h-primary center">Our Menu</h1>
+        <div id="services">
+            <div class="box">
+                <img src="food2.webp">
+                <h2 class="h2-secondary center">Breakfast</h2>
+                <p>A Delicious Burger with combination of five world class sausages and mouth-watering French Fries with some salad. </p>
+            </div>
+            <div class="box">
+                <img src="food3.jpg">
+                <h2 class="h2-secondary center">Speaciality</h2>
+                <p>An Exotic recepies of India with taste of tradistional Masala make a perfect taste for your meal.</p>
+            </div>
+            <div class="box" id="id3">
+                <img src="food4.jpeg">
+                <h2 class="h2-secondary center">Meal</h2>
+                <p>Get A taste like an home made meal with variety of curry,salad and chapati.With after meal chass and lassi. </p>
+            </div>
+        </div>
+    </section>
+    <section id="client-section">
+        <h1 class="h-primary center">Our Client's</h1>
+        <div id="clients">
+            <div class="clients-item" id="id1">
+                <img src="client1.png">
+            </div>
+            <div class="clients-item">
+                <img src="client2.png">
+            </div>
+            <div class="clients-item">
+                <img src="client3.png">
+            </div>
+            <div class="clients-item">
+                <img src="client4.webp">
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form onsubmit="return(validate());" action="sub.html">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="id11" placeholder="Enter Your Name :">
+                    <label id="id33" style="color: red; visibility: hidden;">Invalid</label>
+                </div>
+                <div class="form-group">
+                    <label for="name">Email: </label>
+                    <input type="text" name="email" id="id66" placeholder="Enter Your Email :">
+                    <label id="id77" style="color: red; visibility: hidden;">Invalid</label>
+
+                </div>
+                <div class="form-group">
+                    <label for="name">Contact:</label>
+                    <input type="text" name="contact" id="id88" placeholder="Enter Your Contact No :">
+                    <label id="id99" style="color: red; visibility: hidden;">Invalid</label>
+                </div>
+                <div class="form-group">
+                    <label for="name">Address: </label>
+                    <textarea name="address" id="name" placeholder="Enter Your Address :"></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn-2" type="submit"><b>Submit</b></button>
+                </div>
+            </form>
+        </div>
+
+    </section>
+    <footer>
+        <div class="center">
+            Copyright &copy; www.chaudhariskitchen.com. All right reserved!
+        </div>
+    </footer>
+</body>
+</html>

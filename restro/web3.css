@@ -1,0 +1,349 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+/*Css Variable*/
+:root{
+    --navbar-height:60px;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    
+}
+
+/*logo and img*/
+
+#logo{
+    margin: 10px 30px;
+
+}
+
+#logo img{
+    height: 62px;
+    margin: 3px 6px;
+}
+#navbar ul{
+    display: flex;
+
+
+}
+
+#navbar::before{
+    content:"";
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.2;
+
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.4rem;
+}
+
+#navbar ul li a{
+    display: block;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Balthazar', serif;
+}
+
+#navbar ul li a:hover{
+    color: khaki;
+    background-color: black;
+    border-radius: 20px;
+}
+
+
+/*home section*/
+
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+    height: 35rem;
+
+}
+
+#home::before{
+    content:"";
+    background: url('food1.jpg') no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.8;
+    top: 0px;
+    left: 0px;
+}
+
+#home h1{
+    color: indigo;
+    text-align: center;
+    font-family: 'Playball', cursive;
+    
+}
+
+#home p{
+    color: black;
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+/*utility content*/
+.h-primary{
+    font-size: 2.8rem;
+    padding: 1px;
+    font-family: 'Baloo Bhai 2', cursive;
+
+}
+
+.h2-secondary{
+    font-size: 1.8rem;
+    font-family: 'Baloo Bhai 2', cursive;
+
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid violet;
+    background-color: brown;
+    border-radius: 9px;
+    color: coral;
+    margin: 17px;
+    font-size: 1.2rem;
+
+}
+
+.btn:active{
+    box-shadow: 0px 2px grey;
+    transition: 0.2s;
+    transform: translateY(8px);
+}
+.btn:hover{
+    cursor: pointer;
+    box-shadow: 0px 9px gray;
+
+}
+
+.center{
+    text-align: center;
+}
+
+/*services*/
+#services-container{
+    margin: 0;
+}
+/*
+#services-container::before{
+    content: "";
+    height: 29.6rem;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.3;
+    background:url('service.png') no-repeat center center/cover;
+    
+    
+}*/
+#services-container h1{
+    margin-top: 120px;
+
+
+    
+}
+#services{
+    margin: 12px 0px 20px 32px;
+    display: flex;
+
+}
+#services .box{
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 17px 24px;
+    border-radius: 23px;
+    background: rgb(248, 190, 190);
+}
+#services .box p{
+    font-family: 'Balthazar', serif;
+    font-size: 18px;
+}
+
+#services .box img{
+    height: 160px;
+    display: block;
+    margin: auto;
+}
+
+/*Client Section*/
+#client-section{
+     height: 350px;
+     margin-top: 0;
+}
+
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('client5.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 350px;
+    z-index: -1;
+    opacity: 0.5;
+    
+
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#clients img{
+    height: 130px;
+}
+
+.clients-item{
+    padding: 34px;
+}
+@media(max-width:72em)
+{
+    #home::before{
+        content:"";
+        background: url('food1.jpg') no-repeat center center/cover;
+        position: absolute;
+        width: 100%;
+        height: 90vh;
+        z-index: -1;
+        opacity: 0.8;
+        top: 0px;
+        left: 0px;
+    }
+    #clients{
+        flex-wrap: wrap;
+        
+    }
+    #id1{
+         padding-left: 5rem;
+    }
+    #clients img{
+        height: 6rem;
+        padding: 0rem 0rem ;
+    }
+    #client-section{
+        margin: 0;
+        position: relative;
+        height: auto;
+    }
+    
+    #client-section::before{
+        height: 27rem;
+        
+    
+    }
+    #services{
+        margin: 12px 0px 20px 32px;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    #services .box{
+        border: 2px solid brown;
+        padding: 34px;
+        margin: 17px 24px;
+        border-radius: 23px;
+        background: rgb(248, 190, 190);
+    }
+    #services .box p{
+        font-family: 'Balthazar', serif;
+        font-size: 18px;
+    }
+}
+
+
+/*contact section*/
+
+#contact{
+    position: relative;
+}
+
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url('contact.webp') no-repeat center center/cover;
+    opacity: 0.8;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4px;
+    
+    
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    border-radius: 9px;
+    border: 3px solid brown;
+
+}
+#contact-box textarea{
+    font-size: 1.5rem;
+
+}
+
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Balthazar', serif;
+
+}
+.btn-2{
+    padding: 6px 20px;
+    border: 2px solid violet;
+    background-color: brown;
+    border-radius: 9px;
+    color: coral;
+    margin-left: 45%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    box-shadow: 0px 9px gray;
+    cursor: pointer;
+    
+
+}
+
+.btn-2:active{
+    transition: 0.2s;
+    box-shadow: 0px 5px gray;
+    transform: translateY(8px);
+}
+
+/*footer*/
+
+footer{
+    background-color: black;
+    color: blanchedalmond;
+    padding: 9px 20px;
+}
+
